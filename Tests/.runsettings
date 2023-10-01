@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+
+<RunSettings>
+	<NUnit>
+		<MaxCpuCount>4</MaxCpuCount>
+		<NumberOfTestWorkers>1</NumberOfTestWorkers>
+		<TestOutputXml>Results</TestOutputXml>
+		<DisplayName>FullName</DisplayName>
+		<UseTestNameInConsoleOutput>true</UseTestNameInConsoleOutput>
+		<ConsoleOut>1</ConsoleOut>
+		<Verbosity>3</Verbosity>
+	</NUnit>
+	
+	<LoggerRunSettings>
+            <Loggers>
+                <Logger friendlyName="console" enabled="True">
+                    <Configuration>
+                        <Verbosity>detailed</Verbosity>
+                    </Configuration>
+                </Logger>
+            </Loggers>
+        </LoggerRunSettings>
+</RunSettings>
