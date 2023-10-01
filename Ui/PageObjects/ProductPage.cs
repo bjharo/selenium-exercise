@@ -20,7 +20,7 @@ public class ProductPage : Page
     public bool IsLoaded(string productName)
     {
         return Driver.WaitForElementToHaveText(PageTitleSelector, productName)
-               && Driver.WaitForElementToBeEnabled(AddToCardBtnSelector);
+               && Driver.WaitForElementToStopAnimating(AddToCardBtnSelector);
     }
 
     public decimal GetPrice()
