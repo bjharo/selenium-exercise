@@ -57,7 +57,7 @@ public class ProductPage : Page
 
     public ProductPage EnterQty(int quantity)
     {
-        Driver.GetElement(QuantityFieldSelector).ClearExistingValueAndEnter(quantity.ToString());
+        Driver.GetElement(QuantityFieldSelector).ClearAndSendKeys(quantity.ToString());
         return this;
     }
 

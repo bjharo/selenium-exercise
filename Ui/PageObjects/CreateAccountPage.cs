@@ -28,31 +28,31 @@ public class CreateAccountPage : Page
 
     public CreateAccountPage EnterFirstName(string firstName)
     {
-        Driver.GetElement(FirstNameFieldSelector).ClearExistingValueAndEnter(firstName);
+        Driver.GetElement(FirstNameFieldSelector).ClearAndSendKeys(firstName);
         return this;
     }
 
     public CreateAccountPage EnterLastName(string lastName)
     {
-        Driver.GetElement(LastNameFieldSelector).ClearExistingValueAndEnter(lastName);
+        Driver.GetElement(LastNameFieldSelector).ClearAndSendKeys(lastName);
         return this;
     }
 
     public CreateAccountPage EnterEmail(string email)
     {
-        Driver.GetElement(EmailFieldSelector).ClearExistingValueAndEnter(email);
+        Driver.GetElement(EmailFieldSelector).ClearAndSendKeys(email);
         return this;
     }
 
     public CreateAccountPage EnterPassword(string password)
     {
-        Driver.GetElement(PasswordFieldSelector).ClearExistingValueAndEnter(password);
+        Driver.GetElement(PasswordFieldSelector).ClearAndSendKeys(password);
         return this;
     }
 
     public CreateAccountPage EnterConfirmPassword(string password)
     {
-        Driver.GetElement(ConfirmPasswordFieldSelector).ClearExistingValueAndEnter(password);
+        Driver.GetElement(ConfirmPasswordFieldSelector).ClearAndSendKeys(password);
         return this;
     }
 

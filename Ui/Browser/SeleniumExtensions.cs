@@ -41,7 +41,7 @@ public static class SeleniumExtensions
         }
     }
 
-    public static void ClearExistingValueAndEnter(this IWebElement element, string newText)
+    public static void ClearAndSendKeys(this IWebElement element, string newText)
     {
         if (OperatingSystem.IsMacOS())
         {
@@ -49,7 +49,7 @@ public static class SeleniumExtensions
         }
         else
         {
-            element.SendKeys(Keys.Command + "a");
+            element.SendKeys(Keys.Control + "a");
         }
 
         element.SendKeys(Keys.Backspace + newText);
