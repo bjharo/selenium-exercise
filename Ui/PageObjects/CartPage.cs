@@ -13,18 +13,18 @@ public class CartPage : Page
     public bool IsLoaded()
     {
         return Driver.WaitForElementToHaveText(PageTitleSelector, "Shopping Cart")
-               && Driver.WaitForElementToBeEnabled(CheckoutBtnSelector);
+               && Driver.WaitForElementToStopAnimating(CheckoutBtnSelector);
     }
 
     public (bool productOnPage, CartItemWidget? itemWidget) GetCartItem(string productName)
     {
-        var Selector =
+        var selector =
             By.XPath(
                 $"//tr[contains(@class, 'item-info')][contains(normalize-space(.), '{productName}')]");
 
         try
         {
-            return (true, new CartItemWidget(Driver, Driver.GetElement(Selector, TimeSpan.FromSeconds(5))));
+            return (true, new CartItemWidget(Driver, Driver.GetElement(selector, TimeSpan.FromSeconds(5))));
         }
         catch (NoSuchElementException)
         {
