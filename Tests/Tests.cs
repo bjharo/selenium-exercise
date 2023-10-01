@@ -82,8 +82,6 @@ public class Tests
                 ExTest.Value!.Log(Status.Warning, "Warning");
                 break;
         }
-
-        ExReport.Flush();
     }
 
     [Test]
